@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- Not Done My Website (c) 2015 Gabriel Simmer
+    This is still being worked on so make sure to git pull
+    from time to time! -->
 <?php 
 	// Setting variables
 	$_site = "Not Done My Website";
@@ -26,7 +29,7 @@
         
         <div class="creation">
             <h3>Variables for web page</h3>
-            
+            <!-- Most of the magic takes place in make.php - look there -->
             <form action="make.php" method="POST">
                 <div id="var">Site name: <input type="text" name="sname" placeholder="Not Done My Website">
                 </div>
