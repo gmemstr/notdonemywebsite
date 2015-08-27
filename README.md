@@ -1,8 +1,5 @@
 # Not Done My Website
 
-[TOC]
-
-
 ## Project Outline
 Not Done My Website is a quick webpage generator for developers who don't have time to build a nice under construction webpage and instead would like to just throw something up very quickly. This provides a tool for generating that and also a framework for making your own templates.
 
