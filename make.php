@@ -6,7 +6,7 @@
 	$scolour = $_POST['scolour'];
 
 	$template = fopen("template/template.html", "r+"); // Change this if you have a custom template filename
-	$tempContents = fread($template, filesize("template/template.html")); //Read frin tge file
+	$tempContents = fread($template, filesize("template/template.html"));
 	
 	// Keywords for replacement - see README
 	$keywords = array("rep_PCOLOUR", "rep_SCOLOUR", "rep_SNAME", "rep_URL", "rep_DEVNAME");
@@ -37,6 +37,6 @@
 	
 	header('Content-Type: text/plain');
 	header('Content-Disposition: attachment; filename=index.html');
-	readfile("index.html"); // Make the client download the file as a .html :)
+	// Make the client download the file as a .html :)
 
 ?>
