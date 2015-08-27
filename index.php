@@ -35,11 +35,17 @@
                 </div>
                 <div id="var">Site URL: <input type="text" name="surl" placeholder="notdonemy.website">
                 </div>
-                <div id="var">Developer/Designer: <input type="text" name="devname" placeholder="John D. Oh">
+                <div id="var">Webmaster: <input type="text" name="devname" placeholder="John D. Oh">
                 </div>
                 <div id="var">Primary Colour: <input type="color" name="pcolour" placeholder="#333333">
                 </div>
                 <div id="var">Secondary Colour: <input type="color" name="scolour" placeholder="#eeeeee">
+                </div>
+                <div id="var">Template: <input list="templates" name="template">
+                <datalist id="templates">
+                    <option value="The Original">
+                    <option value="Forked">
+                </datalist>
                 </div>
 
                 <button type="submit" value="Check">Generate</button>

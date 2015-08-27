@@ -4,9 +4,19 @@
 	$devname = $_POST['devname'];
 	$pcolour = $_POST['pcolour'];
 	$scolour = $_POST['scolour'];
+	$template = $_POST['template'];
 
-	$template = fopen("template/template.html", "r+"); // Change this if you have a custom template filename
-	$tempContents = fread($template, filesize("template/template.html"));
+	$tFile = "template/template.html";
+
+	if($template == "The Original"){
+		$tFile = "template/template.html";
+	}
+	if($template == "Forked"){
+		$tFile = "template/template2.html";
+	}
+
+	$template = fopen($tFile, "r+"); // Change this if you have a custom template filename
+	$tempContents = fread($template, filesize($tFile));
 	
 	// Keywords for replacement - see README
 	$keywords = array("rep_PCOLOUR", "rep_SCOLOUR", "rep_SNAME", "rep_URL", "rep_DEVNAME");
