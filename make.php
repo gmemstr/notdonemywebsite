@@ -1,4 +1,8 @@
 <?php
+	
+	header('Content-Type: text/plain');
+	header('Content-Disposition: attachment; filename=index.html');
+	
 	$sname = $_POST['sname'];
 	$surl = $_POST['surl'];
 	$devname = $_POST['devname'];
@@ -45,8 +49,6 @@
 	* 
 	*/
 	
-	header('Content-Type: text/plain');
-	header('Content-Disposition: attachment; filename=index.html');
 	// Make the client download the file as a .html :)
 
 ?>
