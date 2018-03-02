@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Not Done My Website (c) 2015 Gabriel Simmer
+<!-- Not Done My Website (c) 2018 Gabriel Simmer
     This is still being worked on so make sure to git pull
     from time to time! -->
 <?php 
@@ -41,11 +41,11 @@
                 </div>
                 <div id="var">Secondary Colour: <input type="color" name="scolour" placeholder="#eeeeee">
                 </div>
-                <div id="var">Template: <input list="templates" name="template">
-                <datalist id="templates">
-                    <option value="The Original">
-                    <option value="Forked">
-                </datalist>
+                <div id="var">Template:
+                <select id="templates" name="template">
+                    <option value="The Original">Original</option>
+                    <option value="Forked">Forked</option>
+                </select>
                 </div>
 
                 <button type="submit" value="Check">Generate</button>
