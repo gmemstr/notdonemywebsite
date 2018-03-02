@@ -1,12 +1,14 @@
 # Not Done My Website
 
+__Master is currently legacy code. Consider checking out the rewrite branch :)__
+
 ## Project Outline
 Not Done My Website is a quick webpage generator for developers who don't have time to build a nice under construction webpage and instead would like to just throw something up very quickly. This provides a tool for generating that and also a framework for making your own templates.
 
 ## Running
 You need to have an instance of PHP running. Then do this in the web folder (e.g htdocs in XAMPP).
 ```
-git clone git@gitlab.com:bladesimmer/notdonemywebsite.git
+git clone git@github.com:gmemstr/notdonemywebsite.git
 ```
 Then go to localhost/notdonemywebsite (or however you have your server set up).
 
