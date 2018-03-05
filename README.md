@@ -1,19 +1,31 @@
 # Not Done My Website
 
-__Master is currently legacy code. Consider checking out the rewrite branch :)__
+## Rewrite Goals
 
-## Project Outline
-Not Done My Website is a quick webpage generator for developers who don't have time to build a nice under construction webpage and instead would like to just throw something up very quickly. This provides a tool for generating that and also a framework for making your own templates.
+- [ ] Move frontend to entirely HTML5 w/o framework or PHP
+- [ ] Move backend to Golang or Node.js (undecided as of now)
+- [ ] Create more templates
+- [ ] Work out system for easier template additions
+
+## What is this?
+
+Not Done My Website is a little utility for generating index page placeholders based on required criteria, whether it's because you're working on your website or just need a placeholder page!
 
 ## Running
-You need to have an instance of PHP running. Then do this in the web folder (e.g htdocs in XAMPP).
+
+Right now, you need to have an instance of PHP running. This will change during the rewrite, use `master` branch for stability. 
+
+Clone the repository to your webserver.
+
 ```
 git clone git@github.com:gmemstr/notdonemywebsite.git
 ```
-Then go to localhost/notdonemywebsite (or however you have your server set up).
 
-## Creating Custom Templates
-Custom templates should go in to the `/templates/` folder. They should be .html files (PHP works too but adds a bit of complexity and overall maybe not worth it because the page is returned as a .html), with the CSS included. You may use CDNs to deliver content but keep in mind that the only file the client recieves is the `index.html`.
+Then go to localhost/notdonemywebsite (or however you have your server set up) and generate away.
+
+## Adding Templates
+
+Custom templates belong in the `templates/` folder and should be entirely self contained, and preferably minimized as well. Feel free to make a pull request so we can add your template to the repository! These should be .html files.
 
 ### Keywords for template
 

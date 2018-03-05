@@ -1,0 +1,40 @@
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+}
+h2 {
+	font-weight: lighter; 
+}
+
+nav {
+	padding: 5vh;
+	width: 10vw;
+	height: 90vh;
+	background-color: lightblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; 
+}
+
+button, input {
+	display: block;
+	width: 10vw;
+	height: 5vh;
+}
+input[type=text] {
+	font-size: 100%;
+}
+.themeclr {
+	width: 100%;
+}
+
+.content {
+  position: absolute;
+	top:0;
+	margin-left: 15vw;
+	/* Comment out background color later*/
+	background-color: #E9E9E9;
+	height: 100vh;
+	width: 85vw;
+}
