@@ -6,11 +6,10 @@
 	<title>rep_SNAME - Under Construction</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	
 	<style type="text/css">
 		body{
-			font-family: 'Roboto', sans-serif;
+			font-family: sans-serif;
 			padding: 0;
 			margin: 0;
 			background-color: #E9E9E9;
@@ -23,8 +22,6 @@
 		
 		header {
 			margin-top: -20px;
-			background-color: rep_PCOLOUR;
-			border-bottom: 5px solid rep_SCOLOUR;
 			padding: 10px 0;
 		}
 		
@@ -36,10 +33,7 @@
 			transform: translate(-50%, -50%);
 			font-weight: 400;
 			text-align: center;
-			color: rep_SCOLOUR;
-			background-color: rep_PCOLOUR;
 			box-shadow:2px 2px 5px #888;
-			border-bottom: 5px solid rep_SCOLOUR;
 		}
 	</style>
 	
@@ -47,13 +41,13 @@
 <body>
 	<header>
 		<div class="container">
-			<h1>rep_SNAME</h1>
+			<h1 id="sitename">rep_SNAME</h1>
 		</div>
 	</header>
 
 	<div class="content">
 		<h1>Under Construction</h1>
-		<p>rep_SNAME is being worked on by rep_DEVNAME!</p> <!-- See README for keywords -->
+		<p><span id="sitename">rep_SNAME</span> is being worked on by <span id="devname">rep_DEVNAME!</span>!</p> <!-- See README for keywords -->
 	</div>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Not Done My Website (c) 2018 Gabriel Simmer
+    This is still being worked on so make sure to git pull -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>I'm not done my website!</title>
+        <meta name="description" content="A website for generating placeholder HTML pages.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="assets/css.css">
+    </head>
+	<body>
+        <!-- Sidebar -->
+        <nav>
+            <!-- Buttons for changing theme -->
+            <div id="themebtns">
+                <h1>I'm not done my website!</h1>
+                <h2>Theme</h2>
+                <button class="themebtn" id="original" onclick="getTemplateHtml('original')">Original</button>
+                <button class="themebtn" id="fork" onclick="getTemplateHtml('fork')">Fork</button>
+            </div>
+            <!-- Colour inputs -->
+            <div id="themeclrs">
+                <h2>Colours</h2>
+                <input type="color" class="themeclr" id="primary">
+                <input type="color" class="themeclr" id="secondary">
+            </div>
+            <div id="inputs">
+                <h2>Values</h2>
+                <label for="sitename">Site name</label> 
+                <input type="text" id="sitename" onchange = "valueChange('sitename');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
+                <label for="url">Site URL</label> 
+                <input type="text" id="url" onchange = "valueChange('url');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
+                <label for="devname">Developer name</label> 
+                <input type="text" id="devname" onchange = "valueChange('devname');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
+            </div>
+            <!-- Captcha and download button -->
+            <div id="submit">
+                <span>This is a captcha</span>
+                <button class="submitbtn" id="downloadbtn" onclick="downloadPage()">Download!</button>
+                <a href="#" style="display:none;" id="dl">dl</a>
+            </div>
+        </nav>
+        <iframe id="iframe" src="#" frameborder="0" class="content">
+            Hi
+        </iframe>
+        <script type="text/javascript" src="https://rawgit.com/rndme/download/master/download.min.js"></script>
+        <script type="text/javascript" src="assets/app.js"></script>
+	</body>
+</html>
+    

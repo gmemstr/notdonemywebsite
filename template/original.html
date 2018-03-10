@@ -6,11 +6,10 @@
 	<title>rep_SNAME</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	
 	<style type="text/css">
 		body{
-			font-family: 'Roboto', sans-serif;
+			font-family: sans-serif;
 			position: fixed;
   			top: 40%;
  			left: 50%;
@@ -22,7 +21,6 @@
 			font-weight: 700;
 			padding: 10px;
 			text-align: center;
-			background-color: rep_PCOLOUR;
 			box-shadow:2px 2px 5px #888;
 		}
 		
@@ -30,7 +28,6 @@
 			font-weight: 400;
 			padding: 6%;
 			text-align: center;
-			background-color: rep_SCOLOUR;
 			box-shadow:2px 2px 5px #888;
 		}
 	</style>
@@ -38,11 +35,11 @@
 </head>
 <body>
 	<div class="header">
-		<h1>rep_SNAME</h1>
+		<h1 id="sitename">rep_SNAME</h1>
 	</div>
 	<br />
-	<div class="content">
-		<p>rep_URL is being worked on by rep_DEVNAME!</p> <!-- See README for keywords -->
+	<div class="content" id="content">
+		<p><span id="url">rep_URL</span> is being worked on by <span id="devname">rep_DEVNAME!</span></p> <!-- See README for keywords -->
 	</div>
 </body>
 </html>
