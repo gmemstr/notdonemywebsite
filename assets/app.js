@@ -17,3 +17,12 @@ var valueChange = value => {
 	val = document.getElementById(value).value;
 	iframehtml.innerHTML = val
 }
+
+var downloadPage = () => {
+	var pageContents = new XMLSerializer().serializeToString(document.getElementById('iframe').contentWindow.document)
+	pageContents = pageContents.replace("rep_DEVNAME", document.getElementById("devname").value)
+	pageContents = pageContents.replace("rep_SNAME", document.getElementById("sitename").value)
+	pageContents = pageContents.replace("rep_SURL", document.getElementById("url").value)
+
+	download(pageContents, "index.html", "text/html")
+}

@@ -38,12 +38,14 @@
             <!-- Captcha and download button -->
             <div id="submit">
                 <span>This is a captcha</span>
-                <button class="submitbtn">Download!</button>
+                <button class="submitbtn" id="downloadbtn" onclick="downloadPage()">Download!</button>
+                <a href="#" style="display:none;" id="dl">dl</a>
             </div>
         </nav>
         <iframe id="iframe" src="#" frameborder="0" class="content">
             Hi
         </iframe>
+        <script type="text/javascript" src="https://rawgit.com/rndme/download/master/download.min.js"></script>
         <script type="text/javascript" src="assets/app.js"></script>
 	</body>
 </html>
