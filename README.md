@@ -12,8 +12,6 @@ Not Done My Website is a little utility for generating index page placeholders b
 
 ## Running
 
-Right now, you need to have an instance of PHP running. This will change during the rewrite, use `master` branch for stability. 
-
 Clone the repository to your webserver.
 
 ```
@@ -33,5 +31,3 @@ Custom templates belong in the `templates/` folder and should be entirely self c
 | rep_SURL | URL of the website |
 | rep_SNAME | Name of the website |
 | rep_DEVNAME | Name of the developer/designer |
-| rep_PCOLOUR | Primary colour (hex value)|
-| rep_SCOLOUR | Secondary colour (hex value) |
