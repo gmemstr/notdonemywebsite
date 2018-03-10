@@ -3,7 +3,6 @@
 ## Rewrite Goals
 
 - [x] Move frontend to entirely HTML5 w/o framework or PHP
-~- [ ] Move backend to Golang or Node.js (undecided as of now)~
 - [ ] Create more templates
 - [ ] Work out system for easier template additions
 
