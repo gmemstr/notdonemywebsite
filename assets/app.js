@@ -26,3 +26,4 @@ var downloadPage = () => {
 
 	download(pageContents, "index.html", "text/html")
 }
+getTemplateHtml("original");
