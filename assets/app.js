@@ -41,6 +41,7 @@ const getTemplateHtml = template => {
 
 const valueChange = value => {
     const iframehtml = document.getElementById('iframe').contentWindow.document.getElementById(value);
+    if(!iframehtml) return;
     const val = document.getElementById(value).value;
     iframehtml.innerHTML = val
 };
