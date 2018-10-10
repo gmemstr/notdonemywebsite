@@ -20,12 +20,13 @@
                 <button class="themebtn" id="original" onclick="getTemplateHtml('original')">Original</button>
                 <button class="themebtn" id="fork" onclick="getTemplateHtml('fork')">Fork</button>
                 <button class="themebtn" id="material" onclick="getTemplateHtml('material')">Material</button>
+                <button class="themebtn" id="color_test" onclick="getTemplateHtml('color_test', '#f5f5dd', '#fec1cb')">Color Test</button>
             </div>
             <!-- Colour inputs -->
             <div id="themeclrs">
                 <h2>Colours</h2>
-                <input type="color" class="themeclr" id="primary">
-                <input type="color" class="themeclr" id="secondary">
+                <input type="color" class="themeclr" id="primary" onchange="changeColor(this)">
+                <input type="color" class="themeclr" id="secondary" onchange="changeColor(this)">
             </div>
             <div id="inputs">
                 <h2>Values</h2>
