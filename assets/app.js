@@ -37,12 +37,12 @@ const getTemplateHtml = (template, primary_color="#ffffff", secondary_color="#ff
         html = parseContent(html);
         document.getElementById('iframe').contentWindow.document.write(html);
         primary_elements = document.getElementById('iframe').contentWindow.document.getElementsByClassName("primary_color");
-                applyColor(primary_elements, primary_color);
+        applyColor(primary_elements, primary_color);
 
-                secondary_elements = document.getElementById('iframe').contentWindow.document.getElementsByClassName("secondary_color");
-                applyColor(secondary_elements, secondary_color);
-                document.getElementById("primary").value = primary_color
-                document.getElementById("secondary").value = secondary_color
+        secondary_elements = document.getElementById('iframe').contentWindow.document.getElementsByClassName("secondary_color");
+        applyColor(secondary_elements, secondary_color);
+        document.getElementById("primary").value = primary_color
+        document.getElementById("secondary").value = secondary_color
     });
 };
 
