@@ -16,11 +16,7 @@
             <!-- Buttons for changing theme -->
             <div id="themebtns">
                 <h1>I'm not done my website!</h1>
-                <h2>Theme</h2>
-                <button class="themebtn" id="original" onclick="getTemplateHtml('original')">Original</button>
-                <button class="themebtn" id="fork" onclick="getTemplateHtml('fork')">Fork</button>
-                <button class="themebtn" id="material" onclick="getTemplateHtml('material')">Material</button>
-                <button class="themebtn" id="color_test" onclick="getTemplateHtml('color_test', '#f5f5dd', '#fec1cb')">Color Test</button>
+                <h2>Template</h2>
             </div>
             <!-- Colour inputs -->
             <div id="themeclrs">
@@ -31,11 +27,11 @@
             <div id="inputs">
                 <h2>Values</h2>
                 <label for="sitename">Site name</label> 
-                <input type="text" id="sitename" onchange = "valueChange('sitename');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
+                <input type="text" id="sitename" data-placeholder="rep_SNAME" onchange = "valueChange('sitename');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
                 <label for="url">Site URL</label> 
-                <input type="text" id="url" onchange = "valueChange('url');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
+                <input type="text" id="url" data-placeholder="rep_SURL" onchange = "valueChange('url');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
                 <label for="devname">Developer name</label> 
-                <input type="text" id="devname" onchange = "valueChange('devname');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
+                <input type="text" id="devname" data-placeholder="rep_DEVNAME" onchange = "valueChange('devname');" onkeypress = "this.onchange();" onpaste = "this.onchange();" oninput = "this.onchange();">
             </div>
             <!-- Captcha and download button -->
             <div id="submit">
