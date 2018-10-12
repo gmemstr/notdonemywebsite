@@ -13,5 +13,10 @@
     "id": "fork",
     "name": "Fork",
     "author": "gmemstr"
+  },
+  {
+    "id": "typewriter",
+    "name": "Typewriter",
+    "author": "macno"
   }
 ]
