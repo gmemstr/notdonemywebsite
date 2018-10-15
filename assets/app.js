@@ -9,7 +9,7 @@ const getTemplates = () => {
         })
         .then(function(templates) {
             populateTemplates(templates);
-            getTemplateHtml(templates[0].id);
+            getTemplateHtml(templates[0].id, templates[0].primary_color, templates[0].secondary_color);
         });
 };
 
