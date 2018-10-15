@@ -17,8 +17,23 @@
   {
     "id": "color_test",
     "name": "Color Test",
-    "author": "ovidThomas",
-    "primary_color":  "#f5f5dd", 
-    "secondary_color": "#fec1cb"
+    "author": "OvidiuToma",
+    "colors": [
+      {
+        "id": "primary_color",
+        "name": "Main bg",
+        "default": "#f5f5dd"
+      }, 
+      {
+        "id": "secondary_color",
+        "name": "Block bg",
+        "default": "#fec1cb"
+     }
+    ]
+  },
+  {
+    "id": "typewriter",
+    "name": "Typewriter",
+    "author": "macno"
   }
 ]

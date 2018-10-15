@@ -10,7 +10,8 @@
         
         <link rel="stylesheet" href="assets/css.css">
     </head>
-	<body>
+	<body bgcolor="#E6E6FA">
+		
         <!-- Sidebar -->
         <nav>
             <!-- Buttons for changing theme -->
@@ -21,8 +22,12 @@
             <!-- Colour inputs -->
             <div id="themeclrs">
                 <h2>Colours</h2>
-                <input type="color" class="themeclr" id="primary" onchange="changeColor(this)">
-                <input type="color" class="themeclr" id="secondary" onchange="changeColor(this)">
+                <select id="object_selection" style="width: 100%;" onchange="changeSelectedColor(this)">
+                    <option>Choose an object</option>
+                </select>
+                <input type="color" class="themeclr" id="color_selection" onchange="changeColor(this)">
+
+                <!-- <input type="color" class="themeclr" id="secondary" onchange="changeColor(this)"> -->
             </div>
             <div id="inputs">
                 <h2>Values</h2>

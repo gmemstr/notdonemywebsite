@@ -9,7 +9,7 @@ const getTemplates = () => {
         })
         .then(function(templates) {
             populateTemplates(templates);
-            getTemplateHtml(templates[0].id, templates[0].primary_color, templates[0].secondary_color);
+            getTemplateHtml(templates[0].id, templates[0].colors);
         });
 };
 
@@ -20,14 +20,15 @@ const populateTemplates = templates => {
        button.setAttribute("class", "themebtn");
        button.setAttribute('id', template.id);
        button.addEventListener("click", () => {
-           getTemplateHtml(template.id, template.primary_color, template.secondary_color);
+           getTemplateHtml(template.id, template.colors);
        });
        button.textContent = template.name + ' (by ' + template.author + ')';
        templatesContainer.appendChild(button);
     });
 };
 
-const getTemplateHtml = (template, primary_color="#ffffff", secondary_color="#ffffff") => {
+const getTemplateHtml = (template, colors = []) => {
+    var i, option_html;
     document.getElementById('iframe').src = "about:blank";
     fetch('template/'+template+'.html')
     .then(function(response) {
@@ -36,13 +37,20 @@ const getTemplateHtml = (template, primary_color="#ffffff", secondary_color="#ff
     .then(function(html) {
         html = parseContent(html);
         document.getElementById('iframe').contentWindow.document.write(html);
-        primary_elements = document.getElementById('iframe').contentWindow.document.getElementsByClassName("primary_color");
-        applyColor(primary_elements, primary_color);
-
-        secondary_elements = document.getElementById('iframe').contentWindow.document.getElementsByClassName("secondary_color");
-        applyColor(secondary_elements, secondary_color);
-        document.getElementById("primary").value = primary_color
-        document.getElementById("secondary").value = secondary_color
+        document.getElementById('themeclrs').classList.add("hidden");
+        if(colors.length > 0)
+        {
+            document.getElementById('themeclrs').classList.remove("hidden");
+            document.getElementById("color_selection").value = colors[0].default;
+        }
+        document.getElementById("object_selection").innerHTML = "";
+        for (i = 0; i < colors.length; i++) { 
+            color = colors[i]
+            elements = document.getElementById('iframe').contentWindow.document.getElementById(color.id);
+            option_html = "<option data-color='" + color.default + "' data-target='" + color.id + "' >" + color.name + "</option>";
+            document.getElementById("object_selection").innerHTML += option_html;
+            applyColor(elements, color.default);
+        }
     });
 };
 
@@ -87,23 +95,24 @@ const loadPlaceholder = () => {
 };
 
 const changeColor = (el) => {
-    color = el.value
-    iframe_doc = document.getElementById('iframe').contentWindow.document
-    if(el.id == "primary")
-    {
-        divs = iframe_doc.getElementsByClassName("primary_color")
-    }
-    else
-    {
-        divs = iframe_doc.getElementsByClassName("secondary_color")
-    }
-    applyColor(divs, color);
+    color = el.value;
+    iframe_doc = document.getElementById('iframe').contentWindow.document;
+    target_option = document.getElementById('object_selection');
+    target_id = target_option.options[target_option.selectedIndex].getAttribute("data-target");
+    div = iframe_doc.getElementById(target_id);
+    applyColor(div, color);
 };
 
-const applyColor = (elements, color) => {
-    var i;
-    for (i = 0; i < elements.length; i++) { 
-      elements[i].style["background-color"] = color;
+const changeSelectedColor = (el) => {
+    target_option = document.getElementById('object_selection');
+    target_color = target_option.options[target_option.selectedIndex].getAttribute("data-color");
+    document.getElementById("color_selection").value = target_color;
+};
+
+const applyColor = (element, color) => {
+    if(element != null && element != undefined)
+    {
+        element.style["background-color"] = color;
     }
 };
 
