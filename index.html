@@ -20,11 +20,15 @@
                 <h2>Template</h2>
             </div>
             <!-- Colour inputs -->
-            <!-- <div id="themeclrs">
+            <div id="themeclrs">
                 <h2>Colours</h2>
-                <input type="color" class="themeclr" id="primary">
-                <input type="color" class="themeclr" id="secondary">
-            </div> -->
+                <select id="object_selection" style="width: 100%;" onchange="changeSelectedColor(this)">
+                    <option>Choose an object</option>
+                </select>
+                <input type="color" class="themeclr" id="color_selection" onchange="changeColor(this)">
+
+                <!-- <input type="color" class="themeclr" id="secondary" onchange="changeColor(this)"> -->
+            </div>
             <div id="inputs">
                 <h2>Values</h2>
                 <label for="sitename">Site name</label> 

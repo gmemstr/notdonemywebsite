@@ -15,6 +15,23 @@
     "author": "gmemstr"
   },
   {
+    "id": "color_test",
+    "name": "Color Test",
+    "author": "OvidiuToma",
+    "colors": [
+      {
+        "id": "primary_color",
+        "name": "Main bg",
+        "default": "#f5f5dd"
+      }, 
+      {
+        "id": "secondary_color",
+        "name": "Block bg",
+        "default": "#fec1cb"
+     }
+    ]
+  },
+  {
     "id": "typewriter",
     "name": "Typewriter",
     "author": "macno"
